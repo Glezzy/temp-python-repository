@@ -1,9 +1,4 @@
-#
-#   Python: 3.8.5
-#
-#   Author: Courtney Dart
-#
-#   Description:    Practice creating classes, utilizing polymorphism
+#                   Practice creating classes, utilizing polymorphism
 #                   Remember: a child class can override the behavior
 #                   of the parent class.
 
@@ -12,8 +7,8 @@ print(msg)
 
 # parent class Mammal
 class Mammal:
-    family = "Bear"
-    name = "Grizzly"
+    family = "cougar"
+    name = "Baxter"
     legs = 4
     arms = 0
     carnivore = "y"
@@ -25,32 +20,32 @@ class Mammal:
     def question(self):
         carnivore = input("\nDoes this mammal eat meat? (Y/N): \n>>> ").lower()
         if (carnivore == self.carnivore):
-            print("Bone-appetite!")
+            print("Cheers!")
         else:
-            print("No meat, yay plants!")
+            print("Want some dressing with your salad!?")
 
 
 # child class Human
 class Human(Mammal):
     family = "Homosapien"
-    name = "Courtney"
+    name = "Greg"
     legs = 2
     arms = 2
     stands_upright = "y"
-    gives_handshakes = "y"
+    makes_sense = "n"
 
     def information(self):
-        msg = "\nFamily: {}\nName: {}\nLegs: {}\nArms: {}\nCarnivore: {}\nStands Upright: {}\nGives Handshakes: {}".format(self.family,self.name,self.legs,self.arms,self.carnivore,self.stands_upright,self.gives_handshakes)
+        msg = "\nFamily: {}\nName: {}\nLegs: {}\nArms: {}\nCarnivore: {}\nStands Upright: {}\nmakes_sense: {}".format(self.family,self.name,self.legs,self.arms,self.carnivore,self.stands_upright,self.makes_sense)
         print(msg)
     # polymorphism: child class 'Human' keeps the same function name of their parent class 'Mammal',
     # but we modify the functionality within this method.
     def question(self):
         carnivore = input("\nDoes this mammal eat meat? (Y/N): \n>>> ").lower()
-        handshake = input("\nDoes this mammal shake hands? (Y/N): \n>>> ").lower()
-        if (carnivore == self.carnivore and handshake == self.gives_handshakes):
-            print("Nice to meet you, Human!")
+        understandable = input("\nDoes this mammal make sense? (Y/N): \n>>> ").lower()
+        if (carnivore == self.carnivore and understandable == self.makes_sense):
+            print("You seem pleasant!")
         else:
-            print("Sorry, no handshake.")
+            print("Got to go!")
 
 
 # child class Bird
@@ -77,9 +72,9 @@ class Eagle(Mammal):
     
 
 # the following code invokes the methods inside each class
-bear = Mammal()
-bear.information()
-bear.question()
+cougar = Mammal()
+cougar.information()
+cougar.question()
 
 human1 = Human()
 human1.information()
