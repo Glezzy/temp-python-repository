@@ -13,19 +13,19 @@ class Building(ABC):
         pass
 
 # child class 
-class School(Building):
+class Narnia(Building):
     def exit(self, throughWhat):
-        print("Exiting through ",throughWhat)
+        print("though the wardrobe...",throughWhat)
 
 # child class 
-class Church(Building):
+class TrainStation(Building):
     def exit(self, throughWhat):
-        print("Exiting through ",throughWhat)
+        print("Through platform 9 and three-quarters...",throughWhat)
 
 # Instantiation of child classes
-brockport = School()
+brockport = Narnia()
 brockport.enter()
-brockport.exit("the front door")
-viewChurch = Church()
+brockport.exit("Like a normal person...")
+viewChurch = TrainStation()
 viewChurch.enter()
-viewChurch.exit("the gate")
+viewChurch.exit("Like a normal person...")
