@@ -17,10 +17,10 @@ class Employee:
 
 # Instantiate a class object
 emp1 = Employee("Bob Smith", "bobsmith@gmail.com", 22000, 1612)
-emp1.name
-emp1.email
-emp1._salary
-emp1._Employee__getPin()
+print(emp1.name)
+print(emp1.email")
+print(emp1._salary)
+emp1.__getPin()
         
      
         

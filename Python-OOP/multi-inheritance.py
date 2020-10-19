@@ -2,35 +2,43 @@
 #   Demonstrate creating classes and inheritance
 #   Set attributes with default values
 
-class Class1: 
-    def m(self):
-        class1att = 'random1'
-        class1att2 = 'random2'
-        print("In Class1")  
-        
-class Class2(Class1): 
-    def m(self):
-        class2att = 'random1'
-        class2att2 = 'random2'
-        print("In Class2") 
-  
-class Class3(Class1): 
-    def m(self):
-        class3att = 'random1'
-        class3att2 = 'random2'
-        print("In Class3")      
+
+class Animals: 
       
-class Class4(Class2, Class3): 
-    def m(self):
-        class4att = 'random1'
-        class4att2 = 'random2'
-        print("In Class4")    
+    # Initializing constructor 
+    def __init__(self): 
+        self.legs = 4
+        self.domestic = True
+        self.tail = True
+        self.mammals = True
+      
+    def isMammal(self): 
+        if self.isMammal: 
+            print("It is a mammal.") 
+      
+    def isDomestic(self): 
+        if self.mammals: 
+            print("It is a domestic animal.") 
+      
+class Dogs(Animals): 
+    def __init__(self): 
+        super().__init__() 
   
-obj = Class4() 
-obj.m() 
+    def isMammal(self): 
+        super().isMammal() 
   
-Class2.m(obj) 
-Class3.m(obj) 
-Class1.m(obj) 
+class Cat(Animals): 
+    def __init__(self): 
+        super().__init__() 
+  
+    def hasTailandLegs(self): 
+        if self.tail and self.legs == 4: 
+            print("Has legs and tail") 
+  
+# Dirver code 
+Hebe = Dogs() 
+Hebe.isMammal() 
+Baxter = Cat() 
+Baxter.hasTailandLegs() 
     
     

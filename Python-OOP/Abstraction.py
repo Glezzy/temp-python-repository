@@ -5,21 +5,21 @@ from abc import ABC, abstractmethod
 
 # base/abstract class Building
 class Building(ABC):
-    def enter(self):
+    def enter():
         print("I am entering...")
 
     @abstractmethod
-    def exit(self, throughWhat):
+    def exit(throughWhat):
         pass
 
 # child class 
 class Narnia(Building):
-    def exit(self, throughWhat):
+    def exit(throughWhat):
         print("though the wardrobe...",throughWhat)
 
 # child class 
 class TrainStation(Building):
-    def exit(self, throughWhat):
+    def exit(throughWhat):
         print("Through platform 9 and three-quarters...",throughWhat)
 
 # Instantiation of child classes
