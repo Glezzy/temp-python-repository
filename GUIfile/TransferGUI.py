@@ -82,5 +82,5 @@ btn2.grid(row=3,column=0,padx=(5,15),pady=(0,0),sticky=W)
 btn3.grid(row=4,column=1,columnspan=2,padx=(5,15),pady=(0,0,))
 
 f.pack(padx=(0,0),pady=(25,0))
-
+win.mainloop()
 
