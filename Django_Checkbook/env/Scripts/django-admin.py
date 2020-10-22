@@ -1,5 +1,4 @@
-#!C:\PyProjects\Django_Checkbook\env\Scripts\python.exe
-# When the django-admin.py deprecation ends, remove this script.
+
 import warnings
 
 from django.core import management
